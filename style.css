@@ -1,0 +1,111 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #a3a3a3;
+            overflow-x: hidden;
+        }
+
+        /* Hero background image */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placehold.co/1920x1080/000000/FFF?text=Portrait');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Wavy line SVG for titles */
+        .wavy-line {
+            width: 70px;
+            height: 10px;
+            stroke: #ff0050;
+            stroke-width: 3;
+        }
+
+        /* Custom styles for navigation links */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff0050;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link.active,
+        .nav-link:hover {
+            color: #ffffff;
+        }
+        
+        .nav-link.active::after,
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Header style on scroll */
+        .header-scrolled {
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Portfolio grid item hover effect */
+        .portfolio-item .overlay {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+        
+        /* Contact form input styles */
+        .form-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #4a4a4a;
+            color: white;
+            padding: 10px 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #ff0050;
+        }
+        
+        /* Testimonial slider transitions */
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .testimonial-slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Scroll indicator animation */
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
