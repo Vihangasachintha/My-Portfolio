@@ -12,6 +12,14 @@ body {
             background-position: center;
             background-attachment: fixed;
         }
+
+        .MyPic {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('resources/MyPic.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
         
         /* Wavy line SVG for titles */
         .wavy-line {
