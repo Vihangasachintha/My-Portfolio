@@ -41,26 +41,32 @@ const services = [
   {
     title: 'Back-end',
     iconPath: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+    description: 'Build robust, scalable server-side solutions that power your digital infrastructure. From API development to database architecture, I create the foundation that keeps your applications running smoothly and securely.',
   },
   {
     title: 'Web Design',
     iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+    description: 'Transform your vision into stunning visual experiences that captivate audiences and drive engagement. My designs blend aesthetic excellence with strategic thinking to create memorable brand impressions.',
   },
   {
     title: 'User Experience',
     iconPath: 'M5 12h14M12 5l7 7-7 7',
+    description: 'Craft intuitive, user-centered interfaces that delight and convert. Through research-driven design and iterative testing, I create seamless digital journeys that keep users coming back.',
   },
   {
     title: 'Web Development',
     iconPath: 'M12 6V4m0 16v-2m8-8h2M4 12H2m15.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m12.728 0l-1.414 1.414M5.636 18.364l-1.414 1.414M12 16a4 4 0 110-8 4 4 0 010 8z',
+    description: 'Bring ideas to life with clean, efficient code and cutting-edge technologies. I build responsive, high-performance websites and applications that deliver exceptional results across all devices.',
   },
   {
     title: 'Mobile Applications',
     iconPath: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
+    description: 'Develop native and cross-platform mobile solutions that users love. From concept to launch, I create feature-rich apps that combine sleek design with flawless functionality.',
   },
   {
     title: 'Web Hosting',
     iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+    description: 'Ensure your digital presence stays fast, secure, and always available. I provide reliable hosting solutions that deliver the performance and support your business needs to thrive online.',
   },
 ];
 
@@ -390,9 +396,7 @@ export default function App() {
                     </svg>
                   </div>
                   <h3 className="text-2xl text-white font-semibold mb-2">{service.title}</h3>
-                  <p>
-                    A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                  </p>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
