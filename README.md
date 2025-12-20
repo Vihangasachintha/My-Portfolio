@@ -1,4 +1,4 @@
-# React Portfolio Frontend
+# My Portfolio 
 
 This workspace now serves a React (Vite) rebuild of the original portfolio. The layout, styling, and interactions mirror the legacy HTML/CSS/JS version while running entirely on the client.
 
