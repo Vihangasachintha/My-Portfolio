@@ -65,10 +65,10 @@ const services = [
 ];
 
 const skills = [
-  { label: 'Javascript', percentage: 90 },
-  { label: 'HTML/CSS', percentage: 99 },
-  { label: 'MongoDB', percentage: 95 },
-  { label: 'Python', percentage: 100 },
+  { label: 'Javascript', percentage: 58.50 },
+  { label: 'HTML', percentage: 20.56 },
+  { label: 'Python', percentage: 14.25 },
+  { label: 'CSS', percentage: 6.70 },
 ];
 
 const testimonials = [
