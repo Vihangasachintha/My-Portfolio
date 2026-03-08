@@ -12,28 +12,53 @@ const navLinks = [
 ];
 
 const portfolioItems = [
-  { title: 'Pythagorean Calculator', image: '/resources/pythogarus.jpg', className: '' },
-  { title: 'ChatTranz', image: '/resources/chat4.png', className: 'row-span-2' },
-  { title: 'Car Parking System', image: '/resources/carParking.png', className: '' },
-  {
-    title: 'Stationery',
-    image: 'https://placehold.co/600x400/1a1a1a/FFFFFF?text=Project+4',
-    className: '',
+  { 
+    title: 'Pythagorean Calculator', 
+    image: '/resources/pythogarus.jpg',
+    description: 'A mathematical calculator for computing Pythagorean theorem with an intuitive interface and accurate calculations.',
+    technologies: ['JavaScript', 'HTML', 'CSS'],
+    codeLink: '#',
+    demoLink: '#',
+  },
+  { 
+    title: 'ChatTranz', 
+    image: '/resources/chattranz_portfolio_banner.png',
+    description: 'Real-time chat application with translation features. Supports multiple languages and instant messaging.',
+    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    codeLink: '#',
+    demoLink: '#',
+  },
+  { 
+    title: 'Car Parking System', 
+    image: '/resources/CarParkingManagement.png',
+    description: 'Smart parking management system with real-time availability tracking and automated payment processing.',
+    technologies: ['Java', 'MySQL', 'JavaFX'],
+    codeLink: '#',
+    demoLink: '#',
   },
   {
-    title: 'Camera Gear',
-    image: 'https://placehold.co/600x800/333333/FFFFFF?text=Project+5',
-    className: 'row-span-2',
+    title: 'E-Commerce Platform',
+    image: 'https://placehold.co/600x400/1a1a1a/FFFFFF?text=E-Commerce',
+    description: 'Full-stack e-commerce solution built with Next.js and Node.js. Features include user authentication, payment processing, and admin dashboard.',
+    technologies: ['Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker'],
+    codeLink: '#',
+    demoLink: '#',
   },
   {
-    title: 'Kitchen Interior',
-    image: 'https://placehold.co/600x400/e5e5e5/000000?text=Project+6',
-    className: '',
+    title: 'DevOps Automation Suite',
+    image: 'https://placehold.co/600x400/333333/FFFFFF?text=DevOps',
+    description: 'Comprehensive CI/CD pipeline automation using Jenkins, Docker, and Kubernetes. Reduced deployment time by 70% and improved system reliability.',
+    technologies: ['Jenkins', 'Docker', 'Kubernetes', 'Terraform', 'AWS'],
+    codeLink: '#',
+    demoLink: '#',
   },
   {
-    title: 'Minimalist Knife',
-    image: 'https://placehold.co/600x400/cccccc/000000?text=Project+7',
-    className: '',
+    title: 'Real-time Analytics Dashboard',
+    image: 'https://placehold.co/600x400/2a2a2a/FFFFFF?text=Analytics',
+    description: 'Interactive dashboard for real-time data visualization using React and Firebase. Handles thousands of concurrent users with live updates.',
+    technologies: ['React', 'Firebase', 'Chart.js', 'WebSocket', 'TypeScript'],
+    codeLink: '#',
+    demoLink: '#',
   },
 ];
 
@@ -286,19 +311,73 @@ export default function App() {
 
         <section id="portfolio" className="py-20 md:py-32">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-1">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl text-white font-bold">My Projects</h2>
+              <svg className="wavy-line mx-auto mt-2" viewBox="0 0 69.9 6.3">
+                <path
+                  d="M69.9 3.5c-11.2 0-13.1-3.3-23.1-3.3S35 3.5 25.1 3.5 13 0 2.9 0C1.3 0 0 1.3 0 2.9c0 .2 0 .4.1.6 1.8 1.1 3.9 1.5 5.8 1.5 11.2 0 13.1 3.3 23.1 3.3S40.7 5 50.6 5s13 3.3 23.1 3.3c1.6 0 3.2-.3 4.8-1 .1-.1.1-.2.1-.3 0-1.6-1.3-2.9-2.9-2.9-.2 0-.4 0-.6.1-1.8 1.1-3.9 1.5-5.8 1.5z"
+                  transform="translate(0 -1.8) scale(1.2)"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-52 h-[1000px]">
               {portfolioItems.map((item) => (
                 <div
                   key={item.title}
-                  className={`portfolio-item relative overflow-hidden rounded-lg group ${item.className}`}
+                  className="h-[500px] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 hover:border-red-500 transition-all duration-300 group flex flex-col"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
-                    <h3 className="text-white text-2xl font-bold">{item.title}</h3>
+                  <div className="relative overflow-hidden h-80">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-gray-400 text-sm mb-4 flex-1">{item.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-black text-gray-300 text-xs rounded-md border border-zinc-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex gap-3">
+                      <a
+                        href={item.codeLink}
+                        className="flex items-center gap-2 px-4 py-2 border border-white text-white text-sm rounded hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        <svg
+                          className="w-4 h-4"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                        Code
+                      </a>
+                      <a
+                        href={item.demoLink}
+                        className="flex items-center gap-2 px-4 py-2 bg-white text-black text-sm rounded hover:bg-red-500 hover:text-white transition-all duration-300"
+                      >
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Demo
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -306,24 +385,9 @@ export default function App() {
           </div>
         </section>
 
-        <section id="clients" className="py-16">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-              {clients.map((client) => (
-                <img
-                  key={client.alt}
-                  src={client.src}
-                  alt={client.alt}
-                  className="h-8 opacity-60 hover:opacity-100 transition-opacity"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="about" className="py-20 md:py-32">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center">
               <h2 className="text-4xl text-white font-bold">About Me</h2>
               <svg className="wavy-line mx-auto mt-2" viewBox="0 0 69.9 6.3">
                 <path
@@ -336,9 +400,9 @@ export default function App() {
             <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
               <div className="md:w-1/2 relative">
                 <img
-                  src="https://placehold.co/600x750/000000/FFF?text=Portrait"
+                  src="/resources/MyImg.jpeg"
                   alt="Portrait"
-                  className="rounded-lg shadow-2xl z-10 relative"
+                  className="rounded-lg shadow-2xl z-10 h-[480px] w-[480px]"
                 />
                 <div
                   className="absolute -bottom-4 -right-4 w-40 h-40 bg-repeat bg-center opacity-10"
