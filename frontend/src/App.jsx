@@ -95,7 +95,7 @@ const services = [
   },
 ];
 
-const skills = [
+const defaultSkills = [
   { label: 'Javascript', percentage: 58.50 },
   { label: 'HTML', percentage: 20.56 },
   { label: 'Python', percentage: 14.25 },
@@ -161,6 +161,8 @@ export default function App() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [formFeedback, setFormFeedback] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [skills, setSkills] = useState(defaultSkills);
+  const [isLoadingSkills, setIsLoadingSkills] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -199,6 +201,48 @@ export default function App() {
 
     return () => clearInterval(intervalId);
   }, [testimonialCount]);
+
+  useEffect(() => {
+    async function fetchGitHubLanguages() {
+      try {
+        const reposRes = await fetch(
+          'https://api.github.com/users/Vihangasachintha/repos?per_page=100'
+        );
+        if (!reposRes.ok) throw new Error('Failed to fetch repos');
+        const repos = await reposRes.json();
+
+        const langTotals = {};
+        await Promise.all(
+          repos.map(async (repo) => {
+            const langRes = await fetch(repo.languages_url);
+            if (!langRes.ok) return;
+            const langs = await langRes.json();
+            Object.entries(langs).forEach(([lang, bytes]) => {
+              langTotals[lang] = (langTotals[lang] || 0) + bytes;
+            });
+          })
+        );
+
+        const totalBytes = Object.values(langTotals).reduce((sum, b) => sum + b, 0);
+        if (totalBytes === 0) return;
+
+        const sorted = Object.entries(langTotals)
+          .map(([label, bytes]) => ({
+            label,
+            percentage: parseFloat(((bytes / totalBytes) * 100).toFixed(2)),
+          }))
+          .sort((a, b) => b.percentage - a.percentage)
+          .slice(0, 8);
+
+        setSkills(sorted);
+      } catch {
+        // keep defaultSkills already set in state
+      } finally {
+        setIsLoadingSkills(false);
+      }
+    }
+    fetchGitHubLanguages();
+  }, []);
 
   const handleNavClick = () => {
     if (isMobileMenuOpen) {
@@ -479,17 +523,21 @@ export default function App() {
                 />
               </svg>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {skills.map((skill) => (
-                <div key={skill.label}>
-                  <p className="text-6xl font-bold text-red-500">
-                    {skill.percentage}
-                    <span className="text-4xl">%</span>
-                  </p>
-                  <p className="text-white uppercase tracking-widest mt-2">{skill.label}</p>
-                </div>
-              ))}
-            </div>
+            {isLoadingSkills ? (
+              <div className="text-center text-zinc-400 py-8">Loading languages from GitHub…</div>
+            ) : (
+              <div className="flex flex-wrap justify-center gap-y-10 gap-x-8">
+                {skills.map((skill) => (
+                  <div key={skill.label} className="basis-[calc(50%-1rem)] md:basis-[calc(25%-1.5rem)] text-center">
+                    <p className="text-6xl font-bold text-red-500">
+                      {skill.percentage}
+                      <span className="text-4xl">%</span>
+                    </p>
+                    <p className="text-white uppercase tracking-widest mt-2">{skill.label}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
