@@ -154,20 +154,20 @@ const journalPosts = [
   },
 ];
 
-const clients = [
-  {
-    src: "https://placehold.co/150x50/000000/FFFFFF?text=PUMA",
-    alt: "Puma logo",
-  },
-  {
-    src: "https://placehold.co/150x50/000000/FFFFFF?text=PayPal",
-    alt: "PayPal logo",
-  },
-  {
-    src: "https://placehold.co/150x50/000000/FFFFFF?text=Adobe",
-    alt: "Adobe logo",
-  },
-];
+// const clients = [
+//   {
+//     src: "https://placehold.co/150x50/000000/FFFFFF?text=PUMA",
+//     alt: "Puma logo",
+//   },
+//   {
+//     src: "https://placehold.co/150x50/000000/FFFFFF?text=PayPal",
+//     alt: "PayPal logo",
+//   },
+//   {
+//     src: "https://placehold.co/150x50/000000/FFFFFF?text=Adobe",
+//     alt: "Adobe logo",
+//   },
+// ];
 
 export default function App() {
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
@@ -606,7 +606,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="testimonials" className="py-20 md:py-32 bg-zinc-900">
+        {/* <section id="testimonials" className="py-20 md:py-32 bg-zinc-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl text-white font-bold">
@@ -664,7 +664,7 @@ export default function App() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="journal" className="py-20 md:py-32">
           <div className="container mx-auto px-6">
@@ -799,34 +799,34 @@ export default function App() {
           <h3 className="text-white text-3xl font-bold mb-6">RMP_VSR</h3>
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="#"
+              href="https://web.facebook.com/vsrajakaruna/"
               className="text-white hover:text-red-500 transition-colors"
             >
               FACEBOOK
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/vihanga-sachintha-rajakaruna"
               className="text-white hover:text-red-500 transition-colors"
             >
-              TWITTER
+              LINKEDIN
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/vsrajakaruna/"
               className="text-white hover:text-red-500 transition-colors"
             >
               INSTAGRAM
             </a>
             <a
-              href="#"
+              href="https://wa.me/94781766094"
               className="text-white hover:text-red-500 transition-colors"
             >
-              DRIBBBLE
+              WHATSAPP
             </a>
             <a
-              href="#"
+              href="https://medium.com/@vihangasachintha"
               className="text-white hover:text-red-500 transition-colors"
             >
-              BEHANCE
+              MEDIUM
             </a>
           </div>
           <p>© Copyright 2025 | All rights reserved</p>
