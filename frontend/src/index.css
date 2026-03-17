@@ -364,3 +364,214 @@ body {
     transform: scale(1.02);
   }
 }
+
+/* ===== SERVICE SECTION ANIMATIONS ===== */
+
+/* Service grid container */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+}
+
+/* Base service card - initially hidden, will be animated on scroll */
+.service-grid > div {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Scroll-triggered entrance animation */
+.service-grid > div.service-animate {
+  animation: slideInFadeService 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Staggered animation delays when scrolled into view */
+.service-grid > div.service-animate:nth-child(1) { animation-delay: 0.1s; }
+.service-grid > div.service-animate:nth-child(2) { animation-delay: 0.25s; }
+.service-grid > div.service-animate:nth-child(3) { animation-delay: 0.4s; }
+.service-grid > div.service-animate:nth-child(4) { animation-delay: 0.55s; }
+.service-grid > div.service-animate:nth-child(5) { animation-delay: 0.7s; }
+.service-grid > div.service-animate:nth-child(6) { animation-delay: 0.85s; }
+
+/* Slide in and fade entrance animation */
+@keyframes slideInFadeService {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service card container - hover effects with zoom */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 80, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Service icon animation */
+.service-icon-wrapper {
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+/* Icon border and glow effect */
+.service-icon-border {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 0 2px #ff0050, 0 0 0 6px rgba(255, 0, 80, 0.1);
+}
+
+.service-card:hover .service-icon-border {
+  box-shadow: 0 0 0 2px #ff0050, 0 0 20px rgba(255, 0, 80, 0.4);
+  transform: scale(1.1);
+}
+
+/* SVG icon inside animation */
+.service-icon-svg {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .service-icon-svg {
+  transform: rotateZ(10deg) scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(255, 0, 80, 0.5));
+}
+
+/* Enhanced hover zoom effect for service card */
+.service-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 40px rgba(255, 0, 80, 0.2);
+}
+
+/* Service title animation */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.service-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0050, transparent);
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .service-title {
+  color: #ff0050;
+}
+
+.service-card:hover .service-title::after {
+  width: 30px;
+}
+
+/* Service description animation */
+.service-description {
+  color: #a3a3a3;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  line-height: 1.6;
+}
+
+.service-card:hover .service-description {
+  color: #e0e0e0;
+}
+
+/* Background accent bar effect */
+.service-accent-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0050 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.service-card:hover .service-accent-bar {
+  transform: scaleX(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-icon-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-card {
+    text-align: center;
+  }
+
+  .service-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .service-card:hover .service-title::after {
+    left: 50%;
+  }
+
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .service-grid > div.service-animate {
+    animation: none !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .service-card,
+  .service-icon-border,
+  .service-icon-svg,
+  .service-title,
+  .service-description,
+  .service-accent-bar {
+    transition: opacity 0.2s ease !important;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .service-card:hover .service-icon-svg {
+    transform: none;
+  }
+
+  .service-card:hover .service-icon-border {
+    transform: none;
+  }
+}

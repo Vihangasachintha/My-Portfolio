@@ -224,6 +224,30 @@ export default function App() {
   }, [testimonialCount]);
 
   useEffect(() => {
+    const serviceGrid = document.querySelector(".service-grid");
+    if (!serviceGrid) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const serviceCards = entry.target.querySelectorAll(".service-grid > div");
+            serviceCards.forEach((card) => {
+              card.classList.add("service-animate");
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(serviceGrid);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     async function fetchGitHubLanguages() {
       try {
         const reposRes = await fetch(
@@ -540,29 +564,32 @@ export default function App() {
                 />
               </svg>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="service-grid">
               {services.map((service) => (
-                <div key={service.title} className="text-center md:text-left">
-                  <div className="inline-block p-4 border-2 border-red-500 rounded-full mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-8 w-8 text-red-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d={service.iconPath}
-                      />
-                    </svg>
+                <div key={service.title} className="service-card relative">
+                  <div className="service-icon-wrapper">
+                    <div className="service-icon-border inline-block p-4 border-2 border-red-500 rounded-full">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="service-icon-svg h-8 w-8 text-red-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d={service.iconPath}
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <h3 className="text-2xl text-white font-semibold mb-2">
+                  <h3 className="service-title">
                     {service.title}
                   </h3>
-                  <p>{service.description}</p>
+                  <p className="service-description">{service.description}</p>
+                  <div className="service-accent-bar" />
                 </div>
               ))}
             </div>
