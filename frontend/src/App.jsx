@@ -404,40 +404,40 @@ export default function App() {
                 />
               </svg>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-52 h-[1000px]">
+            <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-52 h-[1000px]">
               {portfolioItems.map((item) => (
                 <div
                   key={item.title}
-                  className="h-[500px] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 hover:border-red-500 transition-all duration-300 group flex flex-col"
+                  className="portfolio-card h-[500px] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 flex flex-col"
                 >
-                  <div className="relative overflow-hidden h-80">
+                  <div className="portfolio-card-image relative overflow-hidden h-80">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-white text-xl font-bold mb-3">
+                    <h3 className="portfolio-card-title text-white text-xl font-bold mb-3">
                       {item.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-4 flex-1">
+                    <p className="portfolio-card-description text-gray-400 text-sm mb-4 flex-1">
                       {item.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="portfolio-tech-tags">
                       {item.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-black text-gray-300 text-xs rounded-md border border-zinc-700"
+                          className="portfolio-tech-tag px-3 py-1 bg-black text-gray-300 text-xs rounded-md border border-zinc-700"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mt-4">
                       <a
                         href={item.codeLink}
-                        className="flex items-center gap-2 px-4 py-2 border border-white text-white text-sm rounded hover:bg-white hover:text-black transition-all duration-300"
+                        className="portfolio-action-btn portfolio-code-btn flex items-center gap-2 px-4 py-2 rounded text-sm"
                       >
                         <svg
                           className="w-4 h-4"
@@ -451,7 +451,7 @@ export default function App() {
                       </a>
                       <a
                         href={item.demoLink}
-                        className="flex items-center gap-2 px-4 py-2 bg-white text-black text-sm rounded hover:bg-red-500 hover:text-white transition-all duration-300"
+                        className="portfolio-action-btn portfolio-demo-btn flex items-center gap-2 px-4 py-2 rounded text-sm"
                       >
                         <svg
                           className="w-4 h-4"
