@@ -11,21 +11,334 @@ body {
   overflow-x: hidden;
 }
 
-.MyPic {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/resources/MyPic.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+  background: linear-gradient(160deg, #000000 0%, #0a0a0a 40%, #111111 70%, #0d0d0d 100%);
+  position: relative;
+  padding-top: 80px;
 }
 
-.hero-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('https://placehold.co/1920x1080/000000/FFF?text=Portrait');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/* Decorative floating circles */
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-circle-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 0, 80, 0.08) 0%, transparent 70%);
+  top: 5%;
+  right: 20%;
+  animation: heroFloat 8s ease-in-out infinite;
+}
+
+.hero-circle-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 0, 80, 0.1) 0%, transparent 70%);
+  bottom: 10%;
+  right: 5%;
+  animation: heroFloat 6s ease-in-out infinite reverse;
+}
+
+.hero-circle-3 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  top: 30%;
+  left: 5%;
+  animation: heroFloat 10s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(255, 0, 80, 0.08);
+  border: 1px solid rgba(255, 0, 80, 0.25);
+  border-radius: 24px;
+  color: #ff4d8a;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  animation: heroPulse 2s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%, 100% { box-shadow: 0 0 6px #22c55e; }
+  50% { box-shadow: 0 0 14px #22c55e, 0 0 20px rgba(34, 197, 94, 0.3); }
+}
+
+/* Name */
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .hero-name {
+    font-size: 4.5rem;
+  }
+}
+
+/* Role */
+.hero-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ff0050;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .hero-role {
+    font-size: 1.5rem;
+  }
+}
+
+/* CTA Buttons */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff0050, #e6004a);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 0, 80, 0.5);
+  background: linear-gradient(135deg, #e6004a, #cc0042);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: transparent;
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+  border-color: #ff0050;
+  color: #ff0050;
+  background: rgba(255, 0, 80, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Social Icons */
+.hero-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a3a3a3;
+  transition: all 0.3s ease;
+}
+
+.hero-social-icon:hover {
+  background: rgba(255, 0, 80, 0.1);
+  border-color: rgba(255, 0, 80, 0.4);
+  color: #ff0050;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 80, 0.2);
+}
+
+/* ===== Photo Animations ===== */
+
+/* Photo wrapper with rotating glow ring */
+.hero-photo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heroPhotoEntrance 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes heroPhotoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Rotating gradient glow ring behind the photo */
+.hero-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 115%;
+  height: 115%;
+  border-radius: 20px;
+  background: conic-gradient(
+    from 0deg,
+    #ff0050,
+    #ff004020,
+    transparent,
+    transparent,
+    transparent,
+    #ff0050
+  );
+  animation: rotateGlow 6s linear infinite;
+  pointer-events: none;
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Outer static border accent */
+.hero-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 108%;
+  height: 108%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 0, 80, 0.15);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+/* Photo frame */
+.hero-photo-frame {
+  width: 320px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0a0a0a;
+  box-shadow:
+    0 0 40px rgba(255, 0, 80, 0.15),
+    0 0 80px rgba(255, 0, 80, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  animation: photoLevitate 4s ease-in-out infinite;
+}
+
+@keyframes photoLevitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (min-width: 768px) {
+  .hero-photo-frame {
+    width: 380px;
+    height: 440px;
+  }
+}
+
+/* Photo image with shimmer effect */
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.6s ease;
+  filter: brightness(0.95);
+}
+
+.hero-photo-frame:hover .hero-photo {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Shimmer light sweep overlay on hover */
+.hero-photo-frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  z-index: 3;
+  transition: none;
+  pointer-events: none;
+}
+
+.hero-photo-frame:hover::after {
+  animation: shimmerSweep 0.8s ease forwards;
+}
+
+@keyframes shimmerSweep {
+  from { left: -60%; }
+  to { left: 120%; }
+}
+
+/* Bottom edge glow pulse */
+.hero-photo-frame::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff0050, transparent);
+  border-radius: 2px;
+  z-index: 4;
+  opacity: 0;
+  animation: edgeGlow 3s ease-in-out infinite;
+}
+
+@keyframes edgeGlow {
+  0%, 100% { opacity: 0; width: 40%; }
+  50% { opacity: 0.8; width: 70%; }
+}
+
+/* Scroll dot animation */
+.hero-scroll-dot {
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 0.3; }
 }
 
 .wavy-line {
