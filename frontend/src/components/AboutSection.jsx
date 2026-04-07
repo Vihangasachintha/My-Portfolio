@@ -8,7 +8,7 @@ export default function AboutSection() {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
           <div className="md:w-1/2 relative">
             <img
-              src="/resources/MyImg.jpeg"
+              src="/dist/resources/MyImg.jpeg"
               alt="Portrait"
               className="rounded-lg shadow-2xl z-10 h-[480px] w-[480px]"
             />
