@@ -7,16 +7,17 @@ export default function JournalSection({ posts }) {
         <SectionHeading title="My Blogs" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.image} className="bg-zinc-900 rounded-lg overflow-hidden group">
+            <div key={post.image} className="journal-card bg-zinc-900 rounded-lg overflow-hidden group relative">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                className="journal-card-image w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-6">
-                <h3 className="text-xl text-white font-semibold mb-2">{post.title}</h3>
-                <p className="text-sm">{post.meta}</p>
+                <h3 className="journal-card-title text-xl text-white font-semibold mb-2">{post.title}</h3>
+                <p className="journal-card-meta text-sm">{post.meta}</p>
               </div>
+              <div className="journal-card-accent" />
             </div>
           ))}
         </div>
