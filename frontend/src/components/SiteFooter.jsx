@@ -6,28 +6,28 @@ export default function SiteFooter() {
         <div className="flex justify-center space-x-6 mb-8">
           <a
             href="https://web.facebook.com/vsrajakaruna/"
-            className="text-white hover:text-red-500 transition-colors"
+            className="text-white hover:text-blue-500 transition-colors"
           >
             FACEBOOK
           </a>
           <a
             href="https://www.linkedin.com/in/vihanga-sachintha-rajakaruna"
-            className="text-white hover:text-red-500 transition-colors"
+            className="text-white hover:text-blue-500 transition-colors"
           >
             LINKEDIN
           </a>
           <a
             href="https://www.instagram.com/vsrajakaruna/"
-            className="text-white hover:text-red-500 transition-colors"
+            className="text-white hover:text-blue-500 transition-colors"
           >
             INSTAGRAM
           </a>
-          <a href="https://wa.me/94781766094" className="text-white hover:text-red-500 transition-colors">
+          <a href="https://wa.me/94781766094" className="text-white hover:text-blue-500 transition-colors">
             WHATSAPP
           </a>
           <a
             href="https://medium.com/@vihangasachintha"
-            className="text-white hover:text-red-500 transition-colors"
+            className="text-white hover:text-blue-500 transition-colors"
           >
             MEDIUM
           </a>
@@ -37,3 +37,4 @@ export default function SiteFooter() {
     </footer>
   );
 }
+

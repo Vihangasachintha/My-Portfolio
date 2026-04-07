@@ -14,7 +14,7 @@ export default function SkillsSection({ skills, isLoadingSkills }) {
                 key={skill.label}
                 className="basis-[calc(50%-1rem)] md:basis-[calc(25%-1.5rem)] text-center"
               >
-                <p className="text-6xl font-bold text-red-500">
+                <p className="text-6xl font-bold text-blue-500">
                   {skill.percentage}
                   <span className="text-4xl">%</span>
                 </p>
@@ -27,3 +27,4 @@ export default function SkillsSection({ skills, isLoadingSkills }) {
     </section>
   );
 }
+

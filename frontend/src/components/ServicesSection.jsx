@@ -9,10 +9,10 @@ export default function ServicesSection({ services }) {
           {services.map((service) => (
             <div key={service.title} className="service-card relative">
               <div className="service-icon-wrapper">
-                <div className="service-icon-border inline-block p-4 border-2 border-red-500 rounded-full">
+                <div className="service-icon-border inline-block p-4 border-2 border-blue-500 rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="service-icon-svg h-8 w-8 text-red-500"
+                    className="service-icon-svg h-8 w-8 text-blue-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -36,3 +36,4 @@ export default function ServicesSection({ services }) {
     </section>
   );
 }
+

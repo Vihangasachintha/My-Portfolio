@@ -59,14 +59,14 @@ export default function ContactSection({
               <p className="uppercase text-sm">EMAIL</p>
               <a
                 href="mailto:sachinthavihangasns@gmail.com"
-                className="text-white hover:text-red-500 transition-colors"
+                className="text-white hover:text-blue-500 transition-colors"
               >
                 sachinthavihangasns@gmail.com
               </a>
             </div>
             <div>
               <p className="uppercase text-sm">PHONE</p>
-              <a href="tel:+781766094" className="text-white hover:text-red-500 transition-colors">
+              <a href="tel:+781766094" className="text-white hover:text-blue-500 transition-colors">
                 +78 1766094
               </a>
             </div>
@@ -84,3 +84,4 @@ export default function ContactSection({
     </section>
   );
 }
+

@@ -29,7 +29,7 @@ body {
 .hero-circle-1 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(255, 0, 80, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 128, 255, 0.08) 0%, transparent 70%);
   top: 5%;
   right: 20%;
   animation: heroFloat 8s ease-in-out infinite;
@@ -38,7 +38,7 @@ body {
 .hero-circle-2 {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255, 0, 80, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 128, 255, 0.1) 0%, transparent 70%);
   bottom: 10%;
   right: 5%;
   animation: heroFloat 6s ease-in-out infinite reverse;
@@ -64,10 +64,10 @@ body {
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(255, 0, 80, 0.08);
-  border: 1px solid rgba(255, 0, 80, 0.25);
+  background: rgba(0, 128, 255, 0.08);
+  border: 1px solid rgba(0, 128, 255, 0.25);
   border-radius: 24px;
-  color: #ff4d8a;
+  color: #4da6ff;
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -76,14 +76,14 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 6px #22c55e;
+  background: #0080ff;
+  box-shadow: 0 0 6px #0080ff;
   animation: heroPulse 2s ease-in-out infinite;
 }
 
 @keyframes heroPulse {
-  0%, 100% { box-shadow: 0 0 6px #22c55e; }
-  50% { box-shadow: 0 0 14px #22c55e, 0 0 20px rgba(34, 197, 94, 0.3); }
+  0%, 100% { box-shadow: 0 0 6px #0080ff; }
+  50% { box-shadow: 0 0 14px #0080ff, 0 0 20px rgba(0, 128, 255, 0.3); }
 }
 
 /* Name */
@@ -105,7 +105,7 @@ body {
 .hero-role {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ff0050;
+  color: #0080ff;
   margin-top: 0.75rem;
 }
 
@@ -120,19 +120,19 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #ff0050, #e6004a);
+  background: linear-gradient(135deg, #0080ff, #006fe0);
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 0, 80, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 128, 255, 0.3);
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 0, 80, 0.5);
-  background: linear-gradient(135deg, #e6004a, #cc0042);
+  box-shadow: 0 6px 25px rgba(0, 128, 255, 0.5);
+  background: linear-gradient(135deg, #006fe0, #005bb8);
 }
 
 .hero-btn-secondary {
@@ -149,9 +149,9 @@ body {
 }
 
 .hero-btn-secondary:hover {
-  border-color: #ff0050;
-  color: #ff0050;
-  background: rgba(255, 0, 80, 0.05);
+  border-color: #0080ff;
+  color: #0080ff;
+  background: rgba(0, 128, 255, 0.05);
   transform: translateY(-2px);
 }
 
@@ -170,11 +170,11 @@ body {
 }
 
 .hero-social-icon:hover {
-  background: rgba(255, 0, 80, 0.1);
-  border-color: rgba(255, 0, 80, 0.4);
-  color: #ff0050;
+  background: rgba(0, 128, 255, 0.1);
+  border-color: rgba(0, 128, 255, 0.4);
+  color: #0080ff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 0, 80, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 128, 255, 0.2);
 }
 
 /* ===== Photo Animations ===== */
@@ -208,12 +208,12 @@ body {
   border-radius: 20px;
   background: conic-gradient(
     from 0deg,
-    #ff0050,
-    #ff004020,
+    #0080ff,
+    #0080ff20,
     transparent,
     transparent,
     transparent,
-    #ff0050
+    #0080ff
   );
   animation: rotateGlow 6s linear infinite;
   pointer-events: none;
@@ -233,7 +233,7 @@ body {
   width: 108%;
   height: 108%;
   border-radius: 20px;
-  border: 1px solid rgba(255, 0, 80, 0.15);
+  border: 1px solid rgba(0, 128, 255, 0.15);
   transform: rotate(-2deg);
   pointer-events: none;
 }
@@ -246,8 +246,8 @@ body {
   overflow: hidden;
   background: #0a0a0a;
   box-shadow:
-    0 0 40px rgba(255, 0, 80, 0.15),
-    0 0 80px rgba(255, 0, 80, 0.05),
+    0 0 40px rgba(0, 128, 255, 0.15),
+    0 0 80px rgba(0, 128, 255, 0.05),
     0 20px 60px rgba(0, 0, 0, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.1);
   position: relative;
@@ -319,7 +319,7 @@ body {
   transform: translateX(-50%);
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #ff0050, transparent);
+  background: linear-gradient(90deg, transparent, #0080ff, transparent);
   border-radius: 2px;
   z-index: 4;
   opacity: 0;
@@ -344,7 +344,7 @@ body {
 .wavy-line {
   width: 70px;
   height: 10px;
-  stroke: #ff0050;
+  stroke: #0080ff;
   stroke-width: 3;
 }
 
@@ -361,7 +361,7 @@ body {
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff0050;
+  background-color: #0080ff;
   transition: width 0.3s ease;
 }
 
@@ -402,7 +402,7 @@ body {
 
 .form-input:focus {
   outline: none;
-  border-bottom-color: #ff0050;
+  border-bottom-color: #0080ff;
 }
 
 .testimonial-slide {
@@ -729,7 +729,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 0, 80, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: inherit;
@@ -751,11 +751,11 @@ body {
 /* Icon border and glow effect */
 .service-icon-border {
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 0 0 2px #ff0050, 0 0 0 6px rgba(255, 0, 80, 0.1);
+  box-shadow: 0 0 0 2px #0080ff, 0 0 0 6px rgba(0, 128, 255, 0.1);
 }
 
 .service-card:hover .service-icon-border {
-  box-shadow: 0 0 0 2px #ff0050, 0 0 20px rgba(255, 0, 80, 0.4);
+  box-shadow: 0 0 0 2px #0080ff, 0 0 20px rgba(0, 128, 255, 0.4);
   transform: scale(1.1);
 }
 
@@ -766,13 +766,13 @@ body {
 
 .service-card:hover .service-icon-svg {
   transform: rotateZ(10deg) scale(1.15);
-  filter: drop-shadow(0 0 8px rgba(255, 0, 80, 0.5));
+  filter: drop-shadow(0 0 8px rgba(0, 128, 255, 0.5));
 }
 
 /* Enhanced hover zoom effect for service card */
 .service-card:hover {
   transform: scale(1.08);
-  box-shadow: 0 15px 40px rgba(255, 0, 80, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 128, 255, 0.2);
 }
 
 /* Service title animation */
@@ -792,12 +792,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ff0050, transparent);
+  background: linear-gradient(90deg, #0080ff, transparent);
   transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .service-card:hover .service-title {
-  color: #ff0050;
+  color: #0080ff;
 }
 
 .service-card:hover .service-title::after {
@@ -822,7 +822,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #ff0050 0%, transparent 100%);
+  background: linear-gradient(90deg, #0080ff 0%, transparent 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -888,3 +888,4 @@ body {
     transform: none;
   }
 }
+
