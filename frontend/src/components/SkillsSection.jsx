@@ -20,6 +20,12 @@ export default function SkillsSection({ skills }) {
         "Libraries I use to add polished UI, robust state handling, real-time features, and better developer velocity.",
       items: skills.libraries ?? [],
     },
+    {
+      title: "Databases",
+      description:
+        "Databases I use to design efficient schemas, manage data integrity, and ship reliable data-driven applications.",
+      items: skills.databases ?? [],
+    },
   ];
 
   return (

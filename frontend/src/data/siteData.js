@@ -163,11 +163,6 @@ export const defaultSkills = {
       alt: "React logo",
     },
     {
-      label: "Next.js",
-      logo: "https://skillicons.dev/icons?i=nextjs",
-      alt: "Next.js logo",
-    },
-    {
       label: "Node.js",
       logo: "https://skillicons.dev/icons?i=nodejs",
       alt: "Node.js logo",
@@ -178,9 +173,9 @@ export const defaultSkills = {
       alt: "Express logo",
     },
     {
-      label: "Spring",
-      logo: "https://skillicons.dev/icons?i=spring",
-      alt: "Spring logo",
+      label: ".NET",
+      logo: "https://skillicons.dev/icons?i=dotnet",
+      alt: " .NET logo",
     },
     {
       label: "Bootstrap",
@@ -195,29 +190,31 @@ export const defaultSkills = {
       alt: "Tailwind CSS logo",
     },
     {
-      label: "jQuery",
-      logo: "https://skillicons.dev/icons?i=jquery",
-      alt: "jQuery logo",
-    },
-    {
-      label: "Redux",
-      logo: "https://skillicons.dev/icons?i=redux",
-      alt: "Redux logo",
-    },
-    {
-      label: "Socket.io",
-      logo: "https://skillicons.dev/icons?i=socketio",
-      alt: "Socket.io logo",
-    },
-    {
       label: "Material UI",
       logo: "https://skillicons.dev/icons?i=materialui",
       alt: "Material UI logo",
+    }
+  ],
+  databases: [
+    {
+      label: "MySQL",
+      logo: "https://skillicons.dev/icons?i=mysql",
+      alt: "MySQL logo",
     },
     {
-      label: "Chart.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg",
-      alt: "Chart.js logo",
+      label: "PostgreSQL",
+      logo: "https://skillicons.dev/icons?i=postgres",
+      alt: "PostgreSQL logo",
+    },
+    {
+      label: "MongoDB",
+      logo: "https://skillicons.dev/icons?i=mongodb",
+      alt: "MongoDB logo",
+    },
+    {
+      label: "Firebase",
+      logo: "https://skillicons.dev/icons?i=firebase",
+      alt: "Firebase logo",
     },
   ],
 };
