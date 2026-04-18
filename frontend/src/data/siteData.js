@@ -112,108 +112,108 @@ export const defaultSkills = {
   languages: [
     {
       label: "JavaScript",
-      logo: "https://skillicons.dev/icons?i=js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       alt: "JavaScript logo",
     },
     {
       label: "TypeScript",
-      logo: "https://skillicons.dev/icons?i=ts",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       alt: "TypeScript logo",
     },
     {
       label: "Python",
-      logo: "https://skillicons.dev/icons?i=py",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
       alt: "Python logo",
     },
     {
       label: "Java",
-      logo: "https://skillicons.dev/icons?i=java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
       alt: "Java logo",
     },
     {
       label: "C",
-      logo: "https://skillicons.dev/icons?i=c",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
       alt: "C logo",
     },
     {
       label: "C#",
-      logo: "https://skillicons.dev/icons?i=cs",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
       alt: "C# logo",
     },
     {
       label: "Go",
-      logo: "https://skillicons.dev/icons?i=go",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
       alt: "Go logo",
     },
     {
       label: "HTML",
-      logo: "https://skillicons.dev/icons?i=html",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
       alt: "HTML logo",
     },
     {
       label: "CSS",
-      logo: "https://skillicons.dev/icons?i=css",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       alt: "CSS logo",
     },
   ],
   frameworks: [
     {
       label: "React",
-      logo: "https://skillicons.dev/icons?i=react",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       alt: "React logo",
     },
     {
       label: "Node.js",
-      logo: "https://skillicons.dev/icons?i=nodejs",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
       alt: "Node.js logo",
     },
     {
       label: "Express",
-      logo: "https://skillicons.dev/icons?i=express",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
       alt: "Express logo",
     },
     {
       label: ".NET",
-      logo: "https://skillicons.dev/icons?i=dotnet",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg",
       alt: " .NET logo",
     },
     {
       label: "Bootstrap",
-      logo: "https://skillicons.dev/icons?i=bootstrap",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
       alt: "Bootstrap logo",
     },
   ],
   libraries: [
     {
       label: "Tailwind CSS",
-      logo: "https://skillicons.dev/icons?i=tailwind",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       alt: "Tailwind CSS logo",
     },
     {
       label: "Material UI",
-      logo: "https://skillicons.dev/icons?i=materialui",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
       alt: "Material UI logo",
     }
   ],
   databases: [
     {
       label: "MySQL",
-      logo: "https://skillicons.dev/icons?i=mysql",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
       alt: "MySQL logo",
     },
     {
       label: "PostgreSQL",
-      logo: "https://skillicons.dev/icons?i=postgres",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
       alt: "PostgreSQL logo",
     },
     {
       label: "MongoDB",
-      logo: "https://skillicons.dev/icons?i=mongodb",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
       alt: "MongoDB logo",
     },
     {
       label: "Firebase",
-      logo: "https://skillicons.dev/icons?i=firebase",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
       alt: "Firebase logo",
     },
   ],
