@@ -224,18 +224,22 @@ export const defaultSkills = {
 
 export const journalPosts = [
   {
-    title: "A Mounteering Guide For Beginners",
-    meta: "By Jeffrey - 5 mins read",
-    image: "https://placehold.co/600x400/555/FFF?text=Blog+1",
+    title: "Why Cloud Backups Are Your Business's Safety Net",
+    meta: "By Vihanga - 5 mins read",
+    image: "../blogs/backups.jpg",
+    url: "https://medium.com/@vihangasachintha/why-cloud-backups-are-your-businesss-safety-net-3888a4e85780",
   },
   {
-    title: "A Mounteering Guide For Beginners",
-    meta: "By Jeffrey - 5 mins read",
-    image: "https://placehold.co/600x400/eee/333?text=Blog+2",
+    title: "The Essential Guide to Networking: How the World Stays Connected",
+    meta: "By Vihanga - 5 mins read",
+    image: "../blogs/networking.jpg",
+    url: "https://medium.com/@vihangasachintha/the-essential-guide-to-networking-how-the-world-stays-connected-548c6c9a3db2",
   },
   {
-    title: "A Mounteering Guide For Beginners",
-    meta: "By Jeffrey - 5 mins read",
-    image: "https://placehold.co/600x400/444/FFF?text=Blog+3",
+    title:
+      "How Face Lock and Fingerprint Authentication Work in Your Handheld Device",
+    meta: "By Vihanga - 5 mins read",
+    image: "../blogs/faceLock.jpg",
+    url: "https://medium.com/@vihangasachintha/how-face-lock-and-fingerprint-authentication-work-in-your-handheld-device-41a92c8c7f90",
   },
 ];

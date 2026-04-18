@@ -7,7 +7,7 @@ export default function JournalSection({ posts }) {
         <SectionHeading title="My Blogs" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.image} className="journal-card bg-zinc-900 rounded-lg overflow-hidden group relative">
+            <div key={post.image} className="journal-card bg-zinc-900 rounded-lg overflow-hidden group relative" onClick={() => window.open(post.url, '_blank')}>
               <img
                 src={post.image}
                 alt={post.title}
