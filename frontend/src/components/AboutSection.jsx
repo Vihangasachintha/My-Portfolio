@@ -32,7 +32,7 @@ export default function AboutSection() {
               which roasted parts of sentences fly into your mouth.
             </p>
             <a
-              href="#"
+              href="/cv.pdf"
               className="inline-block border-2 border-white text-white py-3 px-8 rounded-full hover:bg-white hover:text-black transition-all duration-300"
             >
               DOWNLOAD MY CV
