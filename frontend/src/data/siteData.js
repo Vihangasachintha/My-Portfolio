@@ -16,7 +16,7 @@ export const portfolioItems = [
       "A centralized student marks management system enabling accurate entry, role-based access, subject filtering, and performance analysis to improve efficiency, insights, and academic decision-making.",
     technologies: ["Next.js", "Node.js",".NET", "TypeScript", "MySql"],
     codeLink: "#",
-    demoLink: "#"
+    // demoLink: "#",
   },
   {
     title: "Auto-BlogGen (Ongoing)",
@@ -24,8 +24,17 @@ export const portfolioItems = [
     description:
       "An automated blog generation web application that creates high-quality articles using user input or AI, improving content creation speed, consistency, and productivity for writers and businesses.",
     technologies: ["Node.js", "DeepSeek", "React", "MongoDB"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/Vihangasachintha/Auto-BlogGen.git",
+    // demoLink: "#",
+  },
+  {
+    title: "MovieHub Mobile App",
+    image: "/resources/movieHub.png",
+    description:
+      "A mobile application for browsing and discovering movies with detailed information and reviews.",
+    technologies: ["React Native", "Expo", "Node.js", "AppWrite", "TMDB", "NativeWind" ],
+    codeLink: "https://github.com/Vihangasachintha/movie-app.git",
+    // demoLink: "#",
   },
   {
     title: "ChatTranz",
@@ -33,8 +42,8 @@ export const portfolioItems = [
     description:
       "Real-time chat application with translation features. Supports multiple languages and instant messaging.",
     technologies: ["Flutter","React", "Node.js", "Socket.io", "MongoDB"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/ChatTranz/chattranz.git",
+    // demoLink: "#",
   },
   {
     title: "Velora Cosmetics",
@@ -42,8 +51,8 @@ export const portfolioItems = [
     description:
       "Velora Cosmetics is a modern beauty brand offering high-quality skincare and makeup products, focused on enhancing natural beauty through innovation, elegance, and customer-centric design.",
     technologies: ["React", "Supabase", "MongoDB", "JWT", "Node.js"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/Vihangasachintha/web-frontend-learnings.git",
+    demoLink: "https://web-frontend-learnings.vercel.app/",
   },
   {
     title: "Car Parking System",
@@ -51,17 +60,8 @@ export const portfolioItems = [
     description:
       "Smart parking management system with real-time availability tracking and automated payment processing.",
     technologies: ["Express.js", "JWT", "Node.js", "MongoDB", "React"],
-    codeLink: "#",
-    demoLink: "#",
-  },
-  {
-    title: "Pythagorean Calculator",
-    image: "/resources/pythogarus.jpg",
-    description:
-      "A mathematical calculator for computing Pythagorean theorem with an intuitive interface and accurate calculations.",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/SE4106-Project-Group-11/Parking-Management-System.git",
+    demoLink: "https://www.linkedin.com/posts/viyash24_webdevelopment-fullstack-nodejs-activity-7363066721018036225-0aS1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1uOt8BS6aBR7WMERv_atK_LY_ZroT_nBI",
   },
 ];
 
