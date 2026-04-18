@@ -5,12 +5,12 @@ export default function AboutSection() {
     <section id="about" className="py-20 md:py-32">
       <div className="container mx-auto px-6">
         <SectionHeading title="About Me" />
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          <div className="md:w-1/2 relative">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 text-center md:text-left">
+          <div className="md:w-1/2 relative flex justify-center md:justify-start">
             <img
               src="/resources/MyImg.jpeg"
               alt="Portrait"
-              className="rounded-lg shadow-2xl z-10 h-[480px] w-[480px]"
+              className="about-portrait rounded-lg shadow-2xl z-10 w-full max-w-[320px] sm:max-w-[380px] md:max-w-[480px] h-auto object-cover"
             />
             <div
               className="absolute -bottom-4 -right-4 w-40 h-40 bg-repeat bg-center opacity-10"

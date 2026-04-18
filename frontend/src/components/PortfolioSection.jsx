@@ -5,13 +5,13 @@ export default function PortfolioSection({ items }) {
     <section id="portfolio" className="py-20 md:py-32">
       <div className="container mx-auto px-6">
         <SectionHeading title="My Projects" />
-        <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-52 h-[1000px]">
+        <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {items.map((item) => (
             <div
               key={item.title}
-              className="portfolio-card h-[500px] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 flex flex-col"
+              className="portfolio-card bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 flex flex-col h-full"
             >
-              <div className="portfolio-card-image relative overflow-hidden h-80">
+              <div className="portfolio-card-image relative overflow-hidden">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">

@@ -13,9 +13,9 @@ export default function Header({
         isHeaderScrolled ? "header-scrolled" : ""
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <a href="#home" className="text-white text-3xl font-bold">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="flex items-center justify-between gap-4">
+          <a href="#home" className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
             Vihanga Sachintha
           </a>
           <nav className="hidden md:flex items-center space-x-8">
@@ -55,13 +55,13 @@ export default function Header({
         </div>
       </div>
       <div
-        className={`${isMobileMenuOpen ? "" : "hidden"} md:hidden bg-black bg-opacity-90`}
+        className={`${isMobileMenuOpen ? "" : "hidden"} md:hidden border-t border-white/10 bg-black/95 backdrop-blur-sm`}
       >
         {navLinks.map((link) => (
           <a
             key={link.id}
             href={`#${link.id}`}
-            className="block text-white text-center py-2"
+            className="block text-white text-center py-3 text-sm tracking-wider uppercase"
             onClick={onNavClick}
           >
             {link.label}

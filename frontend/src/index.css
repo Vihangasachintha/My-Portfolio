@@ -513,6 +513,7 @@ body {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  aspect-ratio: 4 / 3;
 }
 
 .portfolio-card-image img {
@@ -836,6 +837,50 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-section {
+    padding-top: 92px;
+  }
+
+  .hero-circle-1 {
+    width: 180px;
+    height: 180px;
+    top: 3%;
+    right: -20px;
+  }
+
+  .hero-circle-2 {
+    width: 140px;
+    height: 140px;
+    right: -30px;
+    bottom: 8%;
+  }
+
+  .hero-circle-3 {
+    width: 110px;
+    height: 110px;
+    left: -20px;
+    top: 24%;
+  }
+
+  .hero-name {
+    font-size: 2.7rem;
+  }
+
+  .hero-role {
+    font-size: 1.1rem;
+  }
+
+  .hero-photo-frame {
+    width: min(100%, 280px);
+    height: 340px;
+  }
+
+  .hero-photo-wrapper::before,
+  .hero-photo-wrapper::after {
+    width: 110%;
+    height: 110%;
+  }
+
   .service-icon-wrapper {
     display: flex;
     justify-content: center;
@@ -963,6 +1008,32 @@ body {
 @media (max-width: 768px) {
   .journal-card:hover {
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-grid > div,
+  .service-grid > div,
+  .journal-card {
+    transform: none;
+  }
+
+  .portfolio-card:hover,
+  .service-card:hover,
+  .journal-card:hover {
+    transform: none;
+  }
+
+  .portfolio-action-btn:hover {
+    transform: none;
+  }
+
+  .portfolio-card-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-portrait {
+    max-width: 100%;
   }
 }
 
