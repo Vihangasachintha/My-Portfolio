@@ -79,7 +79,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 text-purple-200 text-center z-10">
+      <div className="scroll-indicator hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 text-purple-200 text-center z-10">
         <span className="block text-xs tracking-widest mb-2">Scroll to explore</span>
         <div className="w-6 h-10 border-2 border-purple-300/50 rounded-full mx-auto flex justify-center items-start pt-2">
           <div className="w-1 h-2 bg-purple-300 rounded-full hero-scroll-dot" />
