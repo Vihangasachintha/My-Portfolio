@@ -28,8 +28,7 @@ export default function App() {
   });
   const [formFeedback, setFormFeedback] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [skills, setSkills] = useState(defaultSkills);
-  const [isLoadingSkills, setIsLoadingSkills] = useState(true);
+  const [skills] = useState(defaultSkills);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,59 +84,6 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    async function fetchGitHubLanguages() {
-      try {
-        const reposRes = await fetch(
-          "https://api.github.com/users/Vihangasachintha/repos?per_page=100",
-        );
-        if (!reposRes.ok) throw new Error("Failed to fetch repos");
-        const repos = await reposRes.json();
-
-        const langTotals = {};
-        await Promise.all(
-          repos.map(async (repo) => {
-            const langRes = await fetch(repo.languages_url);
-            if (!langRes.ok) return;
-            const langs = await langRes.json();
-            Object.entries(langs).forEach(([lang, bytes]) => {
-              langTotals[lang] = (langTotals[lang] || 0) + bytes;
-            });
-          }),
-        );
-
-        const totalBytes = Object.values(langTotals).reduce(
-          (sum, b) => sum + b,
-          0,
-        );
-        if (totalBytes === 0) return;
-
-        const sorted = Object.entries(langTotals)
-          .map(([label, bytes]) => ({ label, bytes }))
-          .sort((a, b) => b.bytes - a.bytes)
-          .slice(0, 8);
-
-        const topTotalBytes = sorted.reduce((sum, entry) => sum + entry.bytes, 0);
-        if (topTotalBytes === 0) return;
-
-        const topSkills = sorted
-          .map(({ label, bytes }) => ({
-            label,
-            percentage: parseFloat(((bytes / topTotalBytes) * 100).toFixed(2)),
-          }))
-          .sort((a, b) => b.percentage - a.percentage)
-          .slice(0, 8);
-
-        setSkills(topSkills);
-      } catch {
-        // keep defaultSkills already set in state
-      } finally {
-        setIsLoadingSkills(false);
-      }
-    }
-    fetchGitHubLanguages();
-  }, []);
-
   const handleNavClick = () => {
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
@@ -190,7 +136,7 @@ export default function App() {
         <PortfolioSection items={portfolioItems} />
         <AboutSection />
         <ServicesSection services={services} />
-        <SkillsSection skills={skills} isLoadingSkills={isLoadingSkills} />
+        <SkillsSection skills={skills} />
         <JournalSection posts={journalPosts} />
         <ContactSection
           formState={formState}

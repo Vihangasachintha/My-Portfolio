@@ -108,12 +108,119 @@ export const services = [
   },
 ];
 
-export const defaultSkills = [
-  { label: "Javascript", percentage: 58.5 },
-  { label: "HTML", percentage: 20.56 },
-  { label: "Python", percentage: 14.25 },
-  { label: "CSS", percentage: 6.7 },
-];
+export const defaultSkills = {
+  languages: [
+    {
+      label: "JavaScript",
+      logo: "https://skillicons.dev/icons?i=js",
+      alt: "JavaScript logo",
+    },
+    {
+      label: "TypeScript",
+      logo: "https://skillicons.dev/icons?i=ts",
+      alt: "TypeScript logo",
+    },
+    {
+      label: "Python",
+      logo: "https://skillicons.dev/icons?i=py",
+      alt: "Python logo",
+    },
+    {
+      label: "Java",
+      logo: "https://skillicons.dev/icons?i=java",
+      alt: "Java logo",
+    },
+    {
+      label: "C",
+      logo: "https://skillicons.dev/icons?i=c",
+      alt: "C logo",
+    },
+    {
+      label: "C#",
+      logo: "https://skillicons.dev/icons?i=cs",
+      alt: "C# logo",
+    },
+    {
+      label: "Go",
+      logo: "https://skillicons.dev/icons?i=go",
+      alt: "Go logo",
+    },
+    {
+      label: "HTML",
+      logo: "https://skillicons.dev/icons?i=html",
+      alt: "HTML logo",
+    },
+    {
+      label: "CSS",
+      logo: "https://skillicons.dev/icons?i=css",
+      alt: "CSS logo",
+    },
+  ],
+  frameworks: [
+    {
+      label: "React",
+      logo: "https://skillicons.dev/icons?i=react",
+      alt: "React logo",
+    },
+    {
+      label: "Next.js",
+      logo: "https://skillicons.dev/icons?i=nextjs",
+      alt: "Next.js logo",
+    },
+    {
+      label: "Node.js",
+      logo: "https://skillicons.dev/icons?i=nodejs",
+      alt: "Node.js logo",
+    },
+    {
+      label: "Express",
+      logo: "https://skillicons.dev/icons?i=express",
+      alt: "Express logo",
+    },
+    {
+      label: "Spring",
+      logo: "https://skillicons.dev/icons?i=spring",
+      alt: "Spring logo",
+    },
+    {
+      label: "Bootstrap",
+      logo: "https://skillicons.dev/icons?i=bootstrap",
+      alt: "Bootstrap logo",
+    },
+  ],
+  libraries: [
+    {
+      label: "Tailwind CSS",
+      logo: "https://skillicons.dev/icons?i=tailwind",
+      alt: "Tailwind CSS logo",
+    },
+    {
+      label: "jQuery",
+      logo: "https://skillicons.dev/icons?i=jquery",
+      alt: "jQuery logo",
+    },
+    {
+      label: "Redux",
+      logo: "https://skillicons.dev/icons?i=redux",
+      alt: "Redux logo",
+    },
+    {
+      label: "Socket.io",
+      logo: "https://skillicons.dev/icons?i=socketio",
+      alt: "Socket.io logo",
+    },
+    {
+      label: "Material UI",
+      logo: "https://skillicons.dev/icons?i=materialui",
+      alt: "Material UI logo",
+    },
+    {
+      label: "Chart.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg",
+      alt: "Chart.js logo",
+    },
+  ],
+};
 
 export const journalPosts = [
   {
