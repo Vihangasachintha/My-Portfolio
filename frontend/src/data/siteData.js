@@ -10,11 +10,20 @@ export const navLinks = [
 
 export const portfolioItems = [
   {
-    title: "Pythagorean Calculator",
-    image: "/resources/pythogarus.jpg",
+    title: "Integrated School Academy Data and Examination Information System (Ongoing)",
+    image: "/resources/IAIS.png",
     description:
-      "A mathematical calculator for computing Pythagorean theorem with an intuitive interface and accurate calculations.",
-    technologies: ["JavaScript", "HTML", "CSS"],
+      "A centralized student marks management system enabling accurate entry, role-based access, subject filtering, and performance analysis to improve efficiency, insights, and academic decision-making.",
+    technologies: ["Next.js", "Node.js",".NET", "TypeScript", "MySql"],
+    codeLink: "#",
+    demoLink: "#"
+  },
+  {
+    title: "Auto-BlogGen (Ongoing)",
+    image: "/resources/Auto-BlogGen.png",
+    description:
+      "An automated blog generation web application that creates high-quality articles using user input or AI, improving content creation speed, consistency, and productivity for writers and businesses.",
+    technologies: ["Node.js", "DeepSeek", "React", "MongoDB"],
     codeLink: "#",
     demoLink: "#",
   },
@@ -23,7 +32,16 @@ export const portfolioItems = [
     image: "/resources/chattranz_portfolio_banner.png",
     description:
       "Real-time chat application with translation features. Supports multiple languages and instant messaging.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+    technologies: ["Flutter","React", "Node.js", "Socket.io", "MongoDB"],
+    codeLink: "#",
+    demoLink: "#",
+  },
+  {
+    title: "Velora Cosmetics",
+    image: "/resources/velora.png",
+    description:
+      "Velora Cosmetics is a modern beauty brand offering high-quality skincare and makeup products, focused on enhancing natural beauty through innovation, elegance, and customer-centric design.",
+    technologies: ["React", "Supabase", "MongoDB", "JWT", "Node.js"],
     codeLink: "#",
     demoLink: "#",
   },
@@ -32,34 +50,16 @@ export const portfolioItems = [
     image: "/resources/CarParkingManagement.png",
     description:
       "Smart parking management system with real-time availability tracking and automated payment processing.",
-    technologies: ["Java", "MySQL", "JavaFX"],
+    technologies: ["Express.js", "JWT", "Node.js", "MongoDB", "React"],
     codeLink: "#",
     demoLink: "#",
   },
   {
-    title: "E-Commerce Platform",
-    image: "https://placehold.co/600x400/1a1a1a/FFFFFF?text=E-Commerce",
+    title: "Pythagorean Calculator",
+    image: "/resources/pythogarus.jpg",
     description:
-      "Full-stack e-commerce solution built with Next.js and Node.js. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Docker"],
-    codeLink: "#",
-    demoLink: "#",
-  },
-  {
-    title: "DevOps Automation Suite",
-    image: "https://placehold.co/600x400/333333/FFFFFF?text=DevOps",
-    description:
-      "Comprehensive CI/CD pipeline automation using Jenkins, Docker, and Kubernetes. Reduced deployment time by 70% and improved system reliability.",
-    technologies: ["Jenkins", "Docker", "Kubernetes", "Terraform", "AWS"],
-    codeLink: "#",
-    demoLink: "#",
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    image: "https://placehold.co/600x400/2a2a2a/FFFFFF?text=Analytics",
-    description:
-      "Interactive dashboard for real-time data visualization using React and Firebase. Handles thousands of concurrent users with live updates.",
-    technologies: ["React", "Firebase", "Chart.js", "WebSocket", "TypeScript"],
+      "A mathematical calculator for computing Pythagorean theorem with an intuitive interface and accurate calculations.",
+    technologies: ["JavaScript", "HTML", "CSS"],
     codeLink: "#",
     demoLink: "#",
   },
@@ -198,7 +198,7 @@ export const defaultSkills = {
       label: "Material UI",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
       alt: "Material UI logo",
-    }
+    },
   ],
   databases: [
     {
