@@ -178,6 +178,11 @@ export const defaultSkills = {
       alt: " .NET logo",
     },
     {
+      label: "React Native",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg",
+      alt: "React Native logo",
+    },
+    {
       label: "Bootstrap",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
       alt: "Bootstrap logo",
@@ -200,11 +205,6 @@ export const defaultSkills = {
       label: "MySQL",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
       alt: "MySQL logo",
-    },
-    {
-      label: "PostgreSQL",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-      alt: "PostgreSQL logo",
     },
     {
       label: "MongoDB",
