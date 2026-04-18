@@ -837,7 +837,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 92px;
+    padding-top: 64px;
   }
 
   .hero-circle-1 {
@@ -862,16 +862,16 @@ body {
   }
 
   .hero-name {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
   }
 
   .hero-role {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hero-photo-frame {
-    width: min(100%, 280px);
-    height: 340px;
+    width: min(100%, 200px);
+    height: 200px;
   }
 
   .hero-photo-wrapper::before,

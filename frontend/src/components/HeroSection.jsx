@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="hero-section min-h-screen flex items-center relative overflow-hidden"
+      className="hero-section min-h-screen flex items-start md:items-center relative overflow-hidden"
     >
       <div className="hero-circle hero-circle-1" />
       <div className="hero-circle hero-circle-2" />
