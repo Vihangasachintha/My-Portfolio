@@ -453,7 +453,7 @@ body {
 }
 
 #portfolio .container > .grid {
-  grid-auto-rows: 320px;
+  grid-auto-rows: auto;
 }
 
 .portfolio-item {
@@ -513,7 +513,6 @@ body {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  aspect-ratio: 4 / 3;
 }
 
 .portfolio-card-image img {
@@ -1029,7 +1028,7 @@ body {
   }
 
   .portfolio-card-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: auto;
   }
 
   .about-portrait {

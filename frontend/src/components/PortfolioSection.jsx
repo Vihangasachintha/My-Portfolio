@@ -9,9 +9,9 @@ export default function PortfolioSection({ items }) {
           {items.map((item) => (
             <div
               key={item.title}
-              className="portfolio-card bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 flex flex-col h-full"
+              className="portfolio-card bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 flex flex-col h-full min-h-[460px] sm:min-h-[500px]"
             >
-              <div className="portfolio-card-image relative overflow-hidden">
+              <div className="portfolio-card-image relative overflow-hidden h-52 sm:h-60 md:h-64 lg:h-72">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -31,7 +31,7 @@ export default function PortfolioSection({ items }) {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3 mt-4">
+                <div className="flex flex-wrap gap-3 mt-4">
                   <a
                     href={item.codeLink}
                     className="portfolio-action-btn portfolio-code-btn flex items-center gap-2 px-4 py-2 rounded text-sm"
