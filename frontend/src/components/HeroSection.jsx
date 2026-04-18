@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="hero-circle hero-circle-3" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-8 lg:gap-16 text-center md:text-left">
+        <div className="flex flex-col md:flex-row items-center gap-7 md:gap-8 lg:gap-16 text-center md:text-left">
           <div className="md:w-1/2 z-10 flex flex-col items-center md:items-start">
             <div className="hero-badge">
               <span className="hero-badge-dot" />
@@ -30,7 +30,7 @@ export default function HeroSection() {
               user-friendly applications that make a difference.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-5 md:mb-8">
               <a href="#portfolio" className="hero-btn-primary">
                 View My Work
               </a>
