@@ -61,7 +61,7 @@ export const portfolioItems = [
       "Smart parking management system with real-time availability tracking and automated payment processing.",
     technologies: ["Express.js", "JWT", "Node.js", "MongoDB", "React"],
     codeLink: "https://github.com/SE4106-Project-Group-11/Parking-Management-System.git",
-    demoLink: "https://www.linkedin.com/posts/viyash24_webdevelopment-fullstack-nodejs-activity-7363066721018036225-0aS1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1uOt8BS6aBR7WMERv_atK_LY_ZroT_nBI",
+    demoLink: "https://www.linkedin.com/posts/vihanga-sachintha-rajakaruna_webdevelopment-fullstack-nodejs-activity-7385676124888043520-swEk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1uOt8BS6aBR7WMERv_atK_LY_ZroT_nBI",
   },
 ];
 
